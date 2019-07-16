@@ -1,6 +1,9 @@
 {
-  "extends": ["standard"],
+  "extends": "standard",
   "globals": {
     "use": true
+  },
+  "rules": {
+    "camelcase": "off"
   }
 }
