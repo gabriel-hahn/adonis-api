@@ -1,15 +1,8 @@
 'use strict'
 
-/** @typedef {import('@adonisjs/framework/src/Request')} Request */
-/** @typedef {import('@adonisjs/framework/src/Response')} Response */
-/** @typedef {import('@adonisjs/framework/src/View')} View */
-
 const File = use('App/Models/File')
 const Helpers = use('Helpers')
 
-/**
- * Resourceful controller for interacting with files
- */
 class FileController {
   async show ({ params, response }) {
     const file = await File.findOrFail(params.id)
@@ -17,14 +10,6 @@ class FileController {
     return response.download(Helpers.tmpPath(`uploads/${file.file}`))
   }
 
-  /**
-   * Create/save a new file.
-   * POST files
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   */
   async store ({ request, response }) {
     try {
       if (!request.file('file')) return
