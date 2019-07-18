@@ -1,5 +1,7 @@
 'use strict'
 
+const Antl = use('Antl')
+
 class ResetPassword {
   get validadeAll () {
     return true
@@ -10,6 +12,10 @@ class ResetPassword {
       token: 'required',
       password: 'required'
     }
+  }
+
+  get messages () {
+    return Antl.list('validation')
   }
 }
 
