@@ -2,6 +2,26 @@
 
 A example of AdonisJS API using Authentication, Redis, Lucid ORM and much more :sunglasses:
 
+## Versions
+
+AdonisJS | NodeJS  | NPM   |
+---------|---------|-------|
+4.1.0    | 10.16.0 | 6.9.0 |
+
+## Getting Started
+
+To install all dependencies with NPM, you can use the following command:
+
+```sh
+$ npm install
+```
+
+To run this project on development environment after install all dependencies, you need to use the following command:
+
+```sh
+$ adonis serve --dev
+```
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
