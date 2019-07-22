@@ -2,11 +2,31 @@
 
 A example of AdonisJS API using Authentication, Redis, Lucid ORM and much more :sunglasses:
 
+In this project, you can register tasks and users, assigned these tasks to some users and alert them when some assigns happened through emails.
+
 ## Versions
 
 AdonisJS | NodeJS  | NPM   |
 ---------|---------|-------|
 4.1.0    | 10.16.0 | 6.9.0 |
+
+## Dependencies
+
+You must need to use [Redis](https://redis.io) and [PostgreSQL](https://www.postgresql.org) to run this project. You can choose between download them or using [Docker](https://www.docker.com). To run them using Docker, execute the following example commands:
+
+#### Redis
+
+```sh
+$ docker container run --name redis -p 6379:6379 -d -t redis:alpine
+```
+
+#### PostgreSQL
+
+```sh
+$ docker container run -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=adonis -p 7777:5432 postgres
+```
+
+You need to configure .env file to connect to PostgreSQL database that was created. You can use .env.example as a example to your .env file.
 
 ## Getting Started
 
@@ -20,6 +40,14 @@ To run this project on development environment after install all dependencies, y
 
 ```sh
 $ adonis serve --dev
+```
+
+## Routes
+
+To list all routes, you can run the following command inside project folder:
+
+```sh
+$ adonis route:list
 ```
 
 ## Contributing
